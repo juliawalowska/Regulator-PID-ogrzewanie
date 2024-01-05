@@ -1,4 +1,4 @@
-# Wprowadzenie do Systemów Wizyjnych
+# Systemy Mikroprocesorowe
 
 ## Politechnika Poznańska, Instytut Automatyki, Robotyki i Elektrotechniki
 
