@@ -22,7 +22,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\Core\Inc\BMPXX80.h"
-#include "C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\Core\Inc\i2c-lcd.h"
 #include "math.h"
 #include <string.h>
 #include <stdio.h>
@@ -57,11 +56,10 @@ PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
 /* USER CODE BEGIN PV */
 float temperature;
-float huminidity;
 float uchyb=0;
 float poprzedniuchyb;
 float calkowanyuchyb=0;
-float zadana=27;
+float zadana;
 float sterowanie;
 float Tp=0;
 float pTp;
@@ -96,8 +94,7 @@ static void MX_I2C4_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-#define MAX_LENGTH 30
-char text[MAX_LENGTH];
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -125,17 +122,6 @@ char text[MAX_LENGTH];
   MX_TIM3_Init();
   MX_I2C4_Init();
   /* USER CODE BEGIN 2 */
-  HAL_GPIO_TogglePin(GPIOB, LD1_Pin);
-  int wait=HAL_Get_Tick();
-  while(HAL_Get_Tick()-wait<5000){
-	  if (HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin) == 1){
-  		  HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
-  		  lcd_init ();
-  		  break;
-  	  }
-  }
-  HAL_GPIO_TogglePin(GPIOB, LD1_Pin);
-  BMP280_Init(&hi2c1, BMP280_TEMPERATURE_16BIT, BMP280_STANDARD, BMP280_FORCEDMODE);
   HAL_TIM_Encoder_Start(&htim1, TIM_CHANNEL_ALL);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
   /* USER CODE END 2 */
@@ -144,10 +130,6 @@ char text[MAX_LENGTH];
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
 	  if(HAL_GPIO_ReadPin(GPIOB, LD3_Pin) == 0){
 	  zadana=__HAL_TIM_GET_COUNTER(&htim1)/8;
 	  }
@@ -178,18 +160,9 @@ char text[MAX_LENGTH];
 		  }
 		  while(HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin) == 1){}
 	  }
-	  if(HAL_GPIO_ReadPin(GPIOB, LD2_Pin) == 1){
-		  BMP280_ReadTemperatureAndPressure(&temperature, &pressure);
-		   lcd_clear ();
-		   lcd_put_cur(0, 0);
-		   sprintf((char*)text, "Temp. %.2f C", temperature);
-		   lcd_send_string(text);
-		   lcd_put_cur(1, 0);
-		   sprintf((char*)text, "Cisn. %ld Pa", pressure);
-		   lcd_send_string(text);
-		   HAL_Delay(1000);
+    /* USER CODE END WHILE */
 
-	  }
+    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
