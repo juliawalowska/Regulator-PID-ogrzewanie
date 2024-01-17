@@ -46,3 +46,372 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-01-16 16:05:32.708
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:10:13.274
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:10:13.274
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:29:32.564
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:29:32.564
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:35:53.081
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:35:53.081
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:39:46.276
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:39:46.276
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:50:52.552
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:50:52.553
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:51:19.425
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:51:19.425
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:57:18.255
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:57:18.255
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:58:03.187
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:58:03.187
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:58:51.512
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 22:58:51.512
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:01:03.589
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:01:03.589
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:16:00.082
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:16:00.082
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:16:28.998
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:16:28.998
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:18:06.813
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:18:06.813
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:18:34.170
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:18:34.170
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:23:56.406
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:23:56.406
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:24:22.505
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:24:22.505
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:25:46.562
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:25:46.562
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:26:42.782
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:26:42.782
+!MESSAGE 
+
+!ENTRY org.eclipse.equinox.preferences 4 4 2024-01-16 23:26:52.118
+!MESSAGE Exception saving preferences to: C:/Users/GamingSystemOfUseV/Documents/github/Regulator-PID-ogrzewanie/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.launchbar.core.prefs.
+!STACK 0
+java.nio.file.FileSystemException: C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.launchbar.core.prefs.bak -> C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.launchbar.core.prefs: Proces nie może uzyskać dostępu do pliku, ponieważ jest on używany przez inny proces
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:403)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:293)
+	at java.base/java.nio.file.Files.move(Files.java:1432)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:292)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1066)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1042)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalFlush(EclipsePreferences.java:432)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.flush(EclipsePreferences.java:390)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.flush(EclipsePreferences.java:394)
+	at org.eclipse.launchbar.core.internal.LaunchBarManager.setPreference(LaunchBarManager.java:607)
+	at org.eclipse.launchbar.core.internal.LaunchBarManager.storeLaunchMode(LaunchBarManager.java:728)
+	at org.eclipse.launchbar.core.internal.LaunchBarManager.setActiveLaunchMode(LaunchBarManager.java:709)
+	at org.eclipse.launchbar.core.internal.LaunchBarManager.setActive(LaunchBarManager.java:465)
+	at org.eclipse.launchbar.core.internal.LaunchBarManager$2.launchAdded(LaunchBarManager.java:175)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.run(LaunchManager.java:425)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.notify(LaunchManager.java:415)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1046)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:693)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:764)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.launchbar.core 4 0 2024-01-16 23:26:52.165
+!MESSAGE Exception saving preferences to: C:/Users/GamingSystemOfUseV/Documents/github/Regulator-PID-ogrzewanie/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.launchbar.core.prefs.
+!STACK 0
+org.osgi.service.prefs.BackingStoreException: Exception saving preferences to: C:/Users/GamingSystemOfUseV/Documents/github/Regulator-PID-ogrzewanie/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.launchbar.core.prefs.
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:300)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1066)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1042)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalFlush(EclipsePreferences.java:432)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.flush(EclipsePreferences.java:390)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.flush(EclipsePreferences.java:394)
+	at org.eclipse.launchbar.core.internal.LaunchBarManager.setPreference(LaunchBarManager.java:607)
+	at org.eclipse.launchbar.core.internal.LaunchBarManager.storeLaunchMode(LaunchBarManager.java:728)
+	at org.eclipse.launchbar.core.internal.LaunchBarManager.setActiveLaunchMode(LaunchBarManager.java:709)
+	at org.eclipse.launchbar.core.internal.LaunchBarManager.setActive(LaunchBarManager.java:465)
+	at org.eclipse.launchbar.core.internal.LaunchBarManager$2.launchAdded(LaunchBarManager.java:175)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.run(LaunchManager.java:425)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.notify(LaunchManager.java:415)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1046)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:693)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:764)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.nio.file.FileSystemException: C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.launchbar.core.prefs.bak -> C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.launchbar.core.prefs: Proces nie może uzyskać dostępu do pliku, ponieważ jest on używany przez inny proces
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:403)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:293)
+	at java.base/java.nio.file.Files.move(Files.java:1432)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:292)
+	... 20 more
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:26:53.456
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:26:53.456
+!MESSAGE 
+
+!ENTRY org.eclipse.jface 2 0 2024-01-16 23:29:27.989
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-01-16 23:29:27.989
+!MESSAGE A conflict occurred for CTRL+INSERT:
+Binding(CTRL+INSERT,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.copy,Copy,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm.terminal.copy"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+Binding(CTRL+INSERT,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.copy,Copy,
+		Copy the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.copy"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+INSERT,
+	ParameterizedCommand(Command(AnsiConsole.command.copy_without_escapes,Copy Text Without ANSI Escapes,
+		Copy the console content to clipboard, removing the escape sequences,
+		Category(AnsiConsole.command.categoryid,ANSI Support Commands,null,true),
+		WorkbenchHandlerServiceHandler("AnsiConsole.command.copy_without_escapes"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.console.ConsoleView,,,system)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:29:59.235
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:29:59.235
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:30:09.845
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:30:09.845
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:31:50.531
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:31:50.531
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:32:45.732
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:32:45.732
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:33:59.545
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:33:59.545
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:35:19.358
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:35:19.358
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:35:26.697
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2024-01-16 23:35:26.697
+!MESSAGE 
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-16 23:36:33.122
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2024-01-16 23:40:58.143
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException: Cannot read the array length because "containers" is null
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-16 23:42:10.794
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-16 23:44:14.074
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-16 23:46:49.507
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-16 23:48:44.967
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-16 23:49:44.548
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-16 23:50:28.743
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-16 23:52:40.019
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 4 0 2024-01-16 23:54:39.509
+!MESSAGE SWV Client received I/O Exception: Connection reset... trying to reconnect
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 4 0 2024-01-16 23:54:39.511
+!MESSAGE SWVClient - Failed to connect to Host: localhost Port: 61235
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 4 0 2024-01-16 23:54:39.512
+!MESSAGE Failed to reconnect and read data
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/java.net.Socket.connect(Socket.java:583)
+	at java.base/java.net.Socket.<init>(Socket.java:507)
+	at java.base/java.net.Socket.<init>(Socket.java:287)
+	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.connect(SWVClient.java:168)
+	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.getNextByte(SWVClient.java:283)
+	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.run(SWVClient.java:313)
+!SESSION 2024-01-16 23:55:10.063 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-01-16 23:55:22.482
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-01-16 23:55:39.096
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-01-16 23:55:39.119
+!MESSAGE Log4j2 initialized with config file C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-01-16 23:55:52.305
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.jface 2 0 2024-01-16 23:58:29.146
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-01-16 23:58:29.146
+!MESSAGE A conflict occurred for CTRL+INSERT:
+Binding(CTRL+INSERT,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.copy,Copy,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm.terminal.copy"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+Binding(CTRL+INSERT,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.copy,Copy,
+		Copy the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.copy"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+INSERT,
+	ParameterizedCommand(Command(AnsiConsole.command.copy_without_escapes,Copy Text Without ANSI Escapes,
+		Copy the console content to clipboard, removing the escape sequences,
+		Category(AnsiConsole.command.categoryid,ANSI Support Commands,null,true),
+		WorkbenchHandlerServiceHandler("AnsiConsole.command.copy_without_escapes"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.console.ConsoleView,,,system)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-17 00:00:44.610
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-17 00:02:02.185
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-17 00:03:33.385
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-17 00:04:56.056
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-17 00:05:41.586
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-17 00:09:06.078
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-17 00:28:25.104
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-17 00:50:06.349
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-17 00:56:30.862
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-17 01:04:50.916
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-17 01:07:38.775
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 72000000; div: 36

@@ -26,6 +26,7 @@
 #include "math.h"
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,7 +58,7 @@ PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
 /* USER CODE BEGIN PV */
 float temperature;
-float huminidity;
+int32_t pressure;
 float uchyb=0;
 float poprzedniuchyb;
 float calkowanyuchyb=0;
@@ -69,6 +70,7 @@ float const kp=0;
 float const kd=0;
 float const ki=0;
 char msg[50];
+char otrzymana[8];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -126,8 +128,8 @@ char text[MAX_LENGTH];
   MX_I2C4_Init();
   /* USER CODE BEGIN 2 */
   HAL_GPIO_TogglePin(GPIOB, LD1_Pin);
-  int wait=HAL_Get_Tick();
-  while(HAL_Get_Tick()-wait<5000){
+  uint32_t wait=HAL_GetTick();
+  while(HAL_GetTick()-wait<5000){
 	  if (HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin) == 1){
   		  HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
   		  lcd_init ();
@@ -151,12 +153,13 @@ char text[MAX_LENGTH];
 	  if(HAL_GPIO_ReadPin(GPIOB, LD3_Pin) == 0){
 	  zadana=__HAL_TIM_GET_COUNTER(&htim1)/8;
 	  }
-	  temperature=BMP280_ReadTemperature();
+	  //temperature=BMP280_ReadTemperature();
+	  BMP280_ReadTemperatureAndPressure(&temperature, &pressure);
 	  poprzedniuchyb=uchyb;
 	  uchyb=zadana-temperature;
 	  calkowanyuchyb=calkowanyuchyb+uchyb;
 	  pTp=Tp;
-	  Tp=HAL_Get_Tick();
+	  Tp=HAL_GetTick();
 	  sterowanie=round(kp*uchyb+kd/(Tp-pTp)*(uchyb-poprzedniuchyb)+ki*calkowanyuchyb);
 	  if(sterowanie<0){
 		  sterowanie=0;
@@ -169,12 +172,13 @@ char text[MAX_LENGTH];
 //	  HAL_UART_Transmit(&huart3, (uint8_t*)msg, strlen(msg), 1000);
 //	  sprintf((char*)msg, "Temperatura zadana= %3i\n\r °C", temperature);
 //	  HAL_UART_Transmit(&huart3, (uint8_t*)msg, strlen(msg), 1000);
-	  sprintf((char*)msg, "%3i\n\r,%3i\n\r", temperature, zadana);
+	  sprintf((char*)msg, "%f\n\r,%f\n\r", temperature, zadana);
 	  HAL_UART_Transmit(&huart3, (uint8_t*)msg, strlen(msg), 1000);
 	  if (HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin) == 1){
 		  HAL_GPIO_TogglePin(GPIOB, LD3_Pin);
 		  if (HAL_GPIO_ReadPin(GPIOB, LD3_Pin) == 1){
-			  HAL_UART_Transmit(&huart3, (uint8_t*)zadana, sizeof(float), 1000);
+			  HAL_UART_Receive(&huart3,(uint8_t*)otrzymana, 8, 10000);
+			  zadana=atof(otrzymana);
 		  }
 		  while(HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin) == 1){}
 	  }
