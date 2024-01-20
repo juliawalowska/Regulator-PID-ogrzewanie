@@ -27,6 +27,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -72,6 +73,7 @@ float const kd=10;
 float const ki=0.5;
 char msg[50];
 char otrzymana[8];
+bool startuart=false;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -181,8 +183,14 @@ char text[MAX_LENGTH];
 //	  sprintf((char*)msg, "Temperatura zadana= %3i\n\r °C", temperature);
 //	  HAL_UART_Transmit(&huart3, (uint8_t*)msg, strlen(msg), 1000);
 	  sprintf((char*)msg, "%f\n\r%09.6f\n\r", temperature, zadana);
-	  HAL_UART_Transmit(&huart3, (uint8_t*)msg, strlen(msg), 1000);
-	  if (HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin) == 1){
+	  if (startuart){
+		  HAL_UART_Transmit(&huart3, (uint8_t*)msg, strlen(msg), 1000);
+	  }
+	  if (HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin) == 1 && !startuart){
+		  startuart=true;
+		  while(HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin) == 1){}
+	  }
+	  if (HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin) == 1 && startuart){
 		  HAL_GPIO_TogglePin(GPIOB, LD3_Pin);
 		  if (HAL_GPIO_ReadPin(GPIOB, LD3_Pin) == 1){
 			  HAL_UART_Receive(&huart3,(uint8_t*)otrzymana, 8, 10000);

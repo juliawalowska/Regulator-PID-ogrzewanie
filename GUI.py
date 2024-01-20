@@ -26,6 +26,7 @@ def read_from_stm():
             except ValueError as e:
                 print(f"Błąd podczas parsowania danych: {line}. Szczegóły błędu: {e}")
 
+
 def reset_plot():
     x_values.clear()
     y_values.clear()
@@ -47,6 +48,7 @@ def update_plot():
             ax.legend()
             canvas.draw()
 
+set_point = tk.DoubleVar(value=4)
 root = tk.Tk()
 root.title("Temperature Regulator")  # Tytuł okna
 
