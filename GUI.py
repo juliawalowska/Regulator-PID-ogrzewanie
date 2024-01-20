@@ -44,6 +44,6 @@ def update(frame):
     return ln,
 
 # Create animation
-ani = FuncAnimation(fig, update, init_func=init, blit=True, interval=50)
+ani = FuncAnimation(fig, update, init_func=init, blit=True, interval=50, cache_frame_data=False)
 
 plt.show()
