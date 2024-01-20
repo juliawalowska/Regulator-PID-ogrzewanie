@@ -1,60 +1,66 @@
-import numpy as np
-import serial
-import time
+import tkinter as tk
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
+import serial
+import threading
+import time
 
-# Serial port setup
-z1baudrate = 115200
-z1port = 'COM3'  # set the correct port before run it
-z1serial = serial.Serial(port=z1port, baudrate=z1baudrate)
-z1serial.timeout = 2  # set read timeout
-print(z1serial.is_open)  # True for opened
+# Inicjalizacja połączenia szeregowego
+ser = serial.Serial('COM3', 115200)  
 
-# Initialize containers for data
-f1kontener = np.array([])
-czas = []
-zkontener = []
+def read_from_stm():
+    while True:
+        if ser.in_waiting:
+            line = ser.readline().decode('utf-8').rstrip()
+            print(f"Otrzymano dane: {line}")  # Dodano logowanie otrzymanych danych
 
-# Plot setup
+            try:
+                parts = line.split(', ')
+                if len(parts) > 0 and ": " in parts[0]:
+                    sensor_val_str = parts[0].split(': ')[1]
+                    sensor_val = float(sensor_val_str)
+                    y_values.append(sensor_val)
+                    x_values.append(time.time())
+                else:
+                    print("Nieprawidłowy format danych")
+            except ValueError as e:
+                print(f"Błąd podczas parsowania danych: {line}. Szczegóły błędu: {e}")
+
+def reset_plot():
+    x_values.clear()
+    y_values.clear()
+    ax.clear()
+    ax.axhline(y=set_point.get(), color='r', linestyle='-', label="Wartość zadana")
+    ax.legend()
+    canvas.draw()
+
+def update_plot():
+    while True:
+        time.sleep(0.1)  # Opóźnienie dla zmniejszenia obciążenia procesora
+
+        if len(x_values) == len(y_values) and len(x_values) > 0:
+            ax.clear()
+            ax.plot(x_values, y_values, label="Czujnik")
+            ax.axhline(y=set_point.get(), color='r', linestyle='-', label="Wartość zadana")
+            ax.axhline(y=set_point.get() * 1.05, color='g', linestyle='--', label="5% Odchył")
+            ax.axhline(y=set_point.get() * 0.95, color='g', linestyle='--')
+            ax.legend()
+            canvas.draw()
+
+root = tk.Tk()
+root.title("Temperature Regulator")  # Tytuł okna
+
 fig, ax = plt.subplots()
-xdata, ydata = [], []
-ln, = plt.plot([], [], 'r-', animated=True)
+ax.set_title("Temperature Regulator")  # Tytuł wykresu
+canvas = FigureCanvasTkAgg(fig, master=root)
+widget = canvas.get_tk_widget()
+widget.grid(row=0, column=0, columnspan=4)
 
-def init():
-    ax.set_xlim(0, 5)
-    ax.set_ylim(-1, 1)
-    return ln,
+x_values = []
+y_values = []
 
-def update(frame):
-    nonlocal f1kontener
-    nonlocal czas
-    nonlocal xdata, ydata  # Declare nonlocal if these variables are modified within the function
+# Uruchomienie wątków
+threading.Thread(target=read_from_stm, daemon=True).start()
+threading.Thread(target=update_plot, daemon=True).start()
 
-    size = z1serial.inWaiting()
-    if size >= 22:
-        data = z1serial.read(11)
-        f1kontener = np.append(f1kontener, float(data))
-        czas.append(time.time())
-        print(data)
-
-        # Update plot data
-        xdata.append(time.time() - czas[0])
-        ydata.append(float(data))
-        ln.set_data(xdata, ydata)
-        ax.set_xlim(left=max(0, xdata[-1]-5), right=xdata[-1]+1)
-        ax.set_ylim(min(ydata)-1, max(ydata)+1)
-
-    return ln,
-
-# Initialize the plot to set its limits and styles
-def init_plot():
-    ax.set_xlabel('Time (s)')
-    ax.set_ylabel('Data from Serial Port')
-    ax.set_title('Real-time Data Plot')
-    return ln,
-
-# Create animation
-ani = FuncAnimation(fig, update, init_func=init_plot, blit=True, interval=50, cache_frame_data=False)
-
-plt.show()
+root.mainloop()
