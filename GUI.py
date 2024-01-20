@@ -27,6 +27,10 @@ def init():
     return ln,
 
 def update(frame):
+    nonlocal f1kontener
+    nonlocal czas
+    nonlocal xdata, ydata  # Declare nonlocal if these variables are modified within the function
+
     size = z1serial.inWaiting()
     if size >= 22:
         data = z1serial.read(11)
@@ -43,7 +47,14 @@ def update(frame):
 
     return ln,
 
+# Initialize the plot to set its limits and styles
+def init_plot():
+    ax.set_xlabel('Time (s)')
+    ax.set_ylabel('Data from Serial Port')
+    ax.set_title('Real-time Data Plot')
+    return ln,
+
 # Create animation
-ani = FuncAnimation(fig, update, init_func=init, blit=True, interval=50, cache_frame_data=False)
+ani = FuncAnimation(fig, update, init_func=init_plot, blit=True, interval=50, cache_frame_data=False)
 
 plt.show()
