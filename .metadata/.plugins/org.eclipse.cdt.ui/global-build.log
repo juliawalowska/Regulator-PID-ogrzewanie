@@ -1204,3 +1204,512 @@ arm-none-eabi-size   projekt.elf
   49116	    480	   3776	  53372	   d07c	projekt.elf
 Finished building: default.size.stdout
  
+03:25:11 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49116	    480	   3776	  53372	   d07c	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+21:40:34 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:175:47: warning: format '%f' expects argument of type 'double', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  175 |           sprintf((char*)msg, "%f\n\r,%f\n\r,%f\n\r", temperature, zadana,HAL_GetTick());
+      |                                              ~^                           ~~~~~~~~~~~~~
+      |                                               |                           |
+      |                                               double                      uint32_t {aka long unsigned int}
+      |                                              %ld
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49132	    480	   3776	  53388	   d08c	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+23:40:30 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-size   projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49132	    480	   3776	  53388	   d08c	projekt.elf
+Finished building: default.size.stdout
+ 
+23:42:27 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-size   projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49132	    480	   3776	  53388	   d08c	projekt.elf
+Finished building: default.size.stdout
+ 
+00:05:13 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-size   projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49132	    480	   3776	  53388	   d08c	projekt.elf
+Finished building: default.size.stdout
+ 
+00:06:40 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-size   projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49132	    480	   3776	  53388	   d08c	projekt.elf
+Finished building: default.size.stdout
+ 
+00:08:38 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-size   projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49132	    480	   3776	  53388	   d08c	projekt.elf
+Finished building: default.size.stdout
+ 
+00:13:12 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-size   projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49132	    480	   3776	  53388	   d08c	projekt.elf
+Finished building: default.size.stdout
+ 
+00:32:23 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49100	    480	   3776	  53356	   d06c	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+00:44:24 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-size   projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49100	    480	   3776	  53356	   d06c	projekt.elf
+Finished building: default.size.stdout
+ 
+00:45:56 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-size   projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49100	    480	   3776	  53356	   d06c	projekt.elf
+Finished building: default.size.stdout
+ 
+00:47:11 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-size   projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49100	    480	   3776	  53356	   d06c	projekt.elf
+Finished building: default.size.stdout
+ 
+00:48:39 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-size   projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49100	    480	   3776	  53356	   d06c	projekt.elf
+Finished building: default.size.stdout
+ 
+00:58:20 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49116	    480	   3776	  53372	   d07c	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+01:56:20 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+03:05:10 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+03:42:44 **** Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49116	    480	   3776	  53372	   d07c	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+03:46:23 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+03:47:05 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+03:48:55 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-size   projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+03:49:39 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+03:51:01 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+03:52:20 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+03:52:53 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+03:53:28 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+03:54:16 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+03:54:48 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+03:55:16 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+04:04:23 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+04:15:18 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49124	    480	   3776	  53380	   d084	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+16:27:10 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49148	    480	   3776	  53404	   d09c	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+16:37:36 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49148	    480	   3776	  53404	   d09c	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+16:47:27 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49156	    480	   3776	  53412	   d0a4	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+16:48:27 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49156	    480	   3776	  53412	   d0a4	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+16:49:55 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49156	    480	   3776	  53412	   d0a4	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+16:50:26 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49156	    480	   3776	  53412	   d0a4	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+16:50:56 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49156	    480	   3776	  53412	   d0a4	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+23:47:58 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49260	    480	   3784	  53524	   d114	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+23:54:11 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49252	    480	   3784	  53516	   d10c	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+23:55:06 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-size   projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49252	    480	   3784	  53516	   d10c	projekt.elf
+Finished building: default.size.stdout
+ 
+00:05:24 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49252	    480	   3784	  53516	   d10c	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 
+00:33:55 **** Incremental Build of configuration Debug for project projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projekt.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\GamingSystemOfUseV\Documents\github\Regulator-PID-ogrzewanie\projekt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projekt.elf
+ 
+arm-none-eabi-size   projekt.elf 
+arm-none-eabi-objdump -h -S  projekt.elf  > "projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+  49356	    480	   3784	  53620	   d174	projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: projekt.list
+ 

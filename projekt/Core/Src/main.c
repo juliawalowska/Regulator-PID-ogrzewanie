@@ -60,15 +60,16 @@ PCD_HandleTypeDef hpcd_USB_OTG_FS;
 float temperature;
 int32_t pressure;
 float uchyb=0;
+float filtrowanyuchyb=0;
 float poprzedniuchyb;
 float calkowanyuchyb=0;
 float zadana=27;
 float sterowanie;
 float Tp=0;
 float pTp;
-float const kp=0;
-float const kd=0;
-float const ki=0;
+float const kp=6000;
+float const kd=10;
+float const ki=0.5;
 char msg[50];
 char otrzymana[8];
 /* USER CODE END PV */
@@ -151,28 +152,35 @@ char text[MAX_LENGTH];
 
     /* USER CODE BEGIN 3 */
 	  if(HAL_GPIO_ReadPin(GPIOB, LD3_Pin) == 0){
-	  zadana=__HAL_TIM_GET_COUNTER(&htim1)/8;
+	  zadana=__HAL_TIM_GET_COUNTER(&htim1)/8+20;
 	  }
 	  //temperature=BMP280_ReadTemperature();
 	  BMP280_ReadTemperatureAndPressure(&temperature, &pressure);
-	  poprzedniuchyb=uchyb;
+	  poprzedniuchyb=filtrowanyuchyb;
 	  uchyb=zadana-temperature;
+	  filtrowanyuchyb=0.20787957635076193/2*filtrowanyuchyb+(1-0.20787957635076193/2)*uchyb;
 	  calkowanyuchyb=calkowanyuchyb+uchyb;
 	  pTp=Tp;
 	  Tp=HAL_GetTick();
-	  sterowanie=round(kp*uchyb+kd/(Tp-pTp)*(uchyb-poprzedniuchyb)+ki*calkowanyuchyb);
+	  sterowanie=round(kp*uchyb+kd/(Tp-pTp)*(filtrowanyuchyb-poprzedniuchyb)+ki*calkowanyuchyb);
 	  if(sterowanie<0){
 		  sterowanie=0;
 	  }
-	  if(sterowanie>65536){
-		  sterowanie=65536;
+	  if(sterowanie>65535){
+		  sterowanie=65535;
 	  }
-//	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, sterowanie);
+	  if(calkowanyuchyb*ki>65535){
+		  calkowanyuchyb=65535/ki;
+	  }
+	  if(calkowanyuchyb*ki<-65535){
+	  		  calkowanyuchyb=-65535/ki;
+	  	  }
+	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, sterowanie);
 //	  sprintf((char*)msg, "Temperatura aktualna= %3i\n\r °C", temperature);
 //	  HAL_UART_Transmit(&huart3, (uint8_t*)msg, strlen(msg), 1000);
 //	  sprintf((char*)msg, "Temperatura zadana= %3i\n\r °C", temperature);
 //	  HAL_UART_Transmit(&huart3, (uint8_t*)msg, strlen(msg), 1000);
-	  sprintf((char*)msg, "%f\n\r,%f\n\r", temperature, zadana);
+	  sprintf((char*)msg, "%f\n\r%09.6f\n\r", temperature, zadana);
 	  HAL_UART_Transmit(&huart3, (uint8_t*)msg, strlen(msg), 1000);
 	  if (HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin) == 1){
 		  HAL_GPIO_TogglePin(GPIOB, LD3_Pin);
@@ -414,10 +422,10 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 0;
+  htim3.Init.Prescaler = 6000;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 65535;
-  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV4;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
   {
