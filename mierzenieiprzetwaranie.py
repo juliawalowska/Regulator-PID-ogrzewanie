@@ -89,6 +89,7 @@ plt.figure()
 plt.plot(tim,der)
 plt.figure()
 plt.plot(tim[100:np.size(tim)],der[100:np.size(tim)])
+z1serial.close()
 
         
 

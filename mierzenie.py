@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jan 19 01:17:58 2024
+Created on Sat Jan 20 23:23:31 2024
 
-@author: Józef
+@author: GamingSystemOfUseV
 """
+
 import numpy as np
 import serial
 import time
 import matplotlib.pyplot as plt
-czas=[]
+czas=np.array([])
 count=0
 z1baudrate = 115200
 z1port = 'COM3'  # set the correct port before run it
@@ -24,7 +25,7 @@ if z1serial.is_open:
         if size>=22:
             data = z1serial.read(11)
             f1kontener=np.append(f1kontener,float(data))
-            czas.append(time.time())
+            czas=np.append(czas,float(time.time()))
             print(data)
             print(count)
             count=count+1
@@ -41,3 +42,4 @@ for x in czas:
     f1czas=np.append(f1czas,float(x))
 f1czas=f1czas-f1czas[0]*np.ones(np.size(f1czas))
 plt.plot(f1czas,f1kontener)
+z1serial.close()
