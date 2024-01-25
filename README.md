@@ -19,54 +19,11 @@ Celem zadania jest zbudowanie Układu automatycznej regulacji temperatury w opar
 Dodatkowe elementy wykorzystane w budowaniu układu:
   - enkoder
   - wyświetlacz led
-  - zasilacz
-
-Oprócz tego wykorzystano podstawowe elementy takie jak:
+  - [zasilacz](https://www.piekarz.pl/21581-enkoder-obrotowy-ec11p20-l20-20-impulsow/)
   - przewody
   - płytka stykowa
   - rezystory
 
 ## Wykonanie zadania
 
-### Budowa układu w programie KiCad
-
-Przed połączeniem układu i w celu utworzenia dokumentacji połączeń wykorzystano program KiCad.
-
-### Analiza modelu regulatora
-
-Analize wykonano za pomocą obliczeń analitycznych:
-
---------- miejsce na opis procesu i zdjęcia ----------
-
-Niestety ze względu na za wysoki stopień mianownika względem parametrów regulatora nie udało się ulokować biegunów. Doboru nastaw dokonano metodą prób i błedów.
-
-
-### Konfiguracja ioc
-
-Do wykonania zadania konieczna była konfiguracja ioc. Kluczowe dokonane zmiany:
-
-#### Konfiguracja ETH
-Wyłączono funkcję komunikacji po ETH.
-
-#### Konfiguracja USART
-Moduł NUCLEO komunikuje się z czujnikiem poprzez moduł USART, konieczne było skonfigurowanie go w ioc:
-
-#### Konfiguracja wejść i wyjść
-Dodatkowymi elementami załączonymi w projekcie były: enkoder, wyświetlacz LED. Skonfigurowano wyjścia zgodnie ze zdjęciami zamieszczonymi poniżej:
-
-
-### Kod
-
-Kod wgrany do Nucleo został umieszczony w plikach remozytorium w folderze projektu. Opiera się on o konfigurację komunikacji z czujnikiem oraz implementację kontrolera PID. Zawiera odczyt z enkodera wartości zadanej oraz obsługę wyświetlacza LED.
-
-### GUI
-
-Zadanniem GUI jest obrazowanie w czasie rzeczywistym temperatury odczytanej przez czujnik oraz prezentowanie danych na wykresie z zanaczoną wartościa zadaną oraz 5% odchyłami.
-
-### Połączony układ
-
---------- miejsce na  zdjęcia ----------
-
-### Obudowa na układ
-
-Obudowę na układ zaprojektowano w programie SolidWorks, po czym wydrukowano na drukarce 3D.
+Dokumetacja dotycząca wykonania zadania została umieszczona w plikach projektu pod nazwą dokumentacja.pdf.
