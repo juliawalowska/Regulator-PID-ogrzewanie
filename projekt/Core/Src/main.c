@@ -156,8 +156,8 @@ char text[MAX_LENGTH];
 	  if(HAL_GPIO_ReadPin(GPIOB, LD3_Pin) == 0){
 	  zadana=__HAL_TIM_GET_COUNTER(&htim1)/8+20;
 	  }
-	  //temperature=BMP280_ReadTemperature();
-	  BMP280_ReadTemperatureAndPressure(&temperature, &pressure);
+	  temperature=BMP280_ReadTemperature();
+	  //BMP280_ReadTemperatureAndPressure(&temperature, &pressure);
 	  poprzedniuchyb=filtrowanyuchyb;
 	  uchyb=zadana-temperature;
 	  filtrowanyuchyb=0.20787957635076193/2*filtrowanyuchyb+(1-0.20787957635076193/2)*uchyb;
@@ -205,9 +205,8 @@ char text[MAX_LENGTH];
 		   sprintf((char*)text, "Temp. %.2f C", temperature);
 		   lcd_send_string(text);
 		   lcd_put_cur(1, 0);
-		   sprintf((char*)text, "Cisn. %ld Pa", pressure);
+		   sprintf((char*)text, "T_zad. %.2f C", zadana);
 		   lcd_send_string(text);
-		   HAL_Delay(1000);
 
 	  }
   }

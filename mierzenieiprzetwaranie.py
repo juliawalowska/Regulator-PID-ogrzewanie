@@ -25,7 +25,7 @@ if z1serial.is_open:
             count=count+1
             data = z1serial.read(11)
             print(data)
-            zkontener.append(data)
+            zkontener.append(float(data))
             if count>1999:
                 if np.sum(fkontener[np.size(fkontener)-1000:np.size(fkontener)-1])-np.sum(fkontener[np.size(fkontener)-2000:np.size(fkontener)-1001])<10:
                     break
@@ -63,7 +63,7 @@ meanderczas,meander=derivative(meanczas,mean)
 plt.figure()
 plt.plot(meanderczas,meander)
 timedelay=meanderczas[np.argmax(meander)]
-szukane=np.max(fkontener)*(1-np.exp(-1))
+szukane=(np.max(fkontener)-fkontener[0])*(1-np.exp(-1))+fkontener[0]
 znalezione=0
 znalezioneindex=0
 for index,x in enumerate(fkontener):

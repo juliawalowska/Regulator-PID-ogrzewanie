@@ -25,7 +25,7 @@ if z1serial.is_open:
             count=count+1
             data = z1serial.read(11)
             print(data)
-            zkontener.append(data)
+            zkontener.append(float(data))
             if count>1999:
                 if np.sum(f1kontener[np.size(f1kontener)-1000:np.size(f1kontener)-1])-np.sum(f1kontener[np.size(f1kontener)-2000:np.size(f1kontener)-1001])<10:
                     break
