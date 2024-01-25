@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Jan 20 23:23:31 2024
-
-@author: GamingSystemOfUseV
-"""
-
 import numpy as np
 import serial
 import time

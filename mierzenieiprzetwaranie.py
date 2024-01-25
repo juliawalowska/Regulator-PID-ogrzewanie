@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Jan 18 21:31:08 2024
-
-@author: Józef
-"""
 import numpy as np
 import serial
 import time
